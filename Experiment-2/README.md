@@ -96,8 +96,8 @@ After completing this experiment, I learned:
 ## 👨‍💻 Author
 
 **Shubham**  
-Second-Year Student | Chandigarh University  
-Frontend Developer (React)
+Chandigarh University  
+<!-- Frontend Developer (React) -->
 
 ---
 
