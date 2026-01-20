@@ -1,0 +1,139 @@
+/* =========================
+   Global Reset & Base
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Arial, sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+/* =========================
+   Background
+========================= */
+body {
+  background: linear-gradient(135deg, #e3f2fd, #fce4ec);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* =========================
+   Page Layout
+========================= */
+.page-container {
+  width: 100%;
+  min-height: calc(100vh - 64px); /* navbar space */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* =========================
+   Card UI
+========================= */
+.page-card {
+  background: #ffffff;
+  width: 100%;
+  max-width: 420px;
+  padding: 28px 32px;
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+  animation: fadeSlide 0.6s ease-in-out;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Card Hover Effect */
+.page-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.16);
+}
+
+/* =========================
+   Headings
+========================= */
+.page-card h2 {
+  text-align: center;
+  margin-bottom: 22px;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+/* =========================
+   Form Spacing
+========================= */
+.page-card > * {
+  margin-bottom: 16px;
+}
+
+/* =========================
+   Material UI Fixes
+========================= */
+.MuiTextField-root,
+.MuiSelect-root {
+  width: 100%;
+}
+
+/* Button Styling */
+.MuiButton-root {
+  width: 100%;
+  padding: 10px !important;
+  font-size: 0.95rem !important;
+  font-weight: 600 !important;
+  border-radius: 10px !important;
+  text-transform: none !important;
+  transition: all 0.3s ease !important;
+}
+
+.MuiButton-root:hover {
+  transform: scale(1.02);
+}
+
+/* Rating Center */
+.MuiRating-root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+/* Checkbox Alignment */
+.MuiFormControlLabel-root {
+  margin-left: 0 !important;
+}
+
+/* =========================
+   Animations
+========================= */
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   Responsive
+========================= */
+@media (max-width: 480px) {
+  .page-card {
+    padding: 22px;
+  }
+
+  .page-card h2 {
+    font-size: 1.4rem;
+  }
+}
