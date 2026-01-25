@@ -1,28 +1,19 @@
-import UITextField from "../components/Text_Filed";
-import UISelect from "../components/Select";
-import UIRating from "../components/Rating";
-import UICheckbox from "../components/CHeckBox";
-import Buttonio from "../components/Buttonio";
+import PageLayout from "./PageLayout";
+import UITextField from "./Text_Filed";
+import UISelect from "./Select";
+import UIRating from "./Rating";
+import UICheckbox from "./CHeckBox";
+import Buttonio from "./Buttonio";
 
 const Contact = () => {
   return (
-    <div>
-      <h2>Contact Page</h2>
-
+    <PageLayout title="Contact Page">
       <UITextField label="Email" />
-      <br /><br />
-
       <UISelect />
-      <br /><br />
-
       <UICheckbox label="Subscribe" />
-      <br /><br />
-
       <UIRating />
-      <br /><br />
-
       <Buttonio text="Contact Us" />
-    </div>
+    </PageLayout>
   );
 };
 

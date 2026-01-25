@@ -1,12 +1,11 @@
 /* =========================
-   Global Reset & Base
+   Global Reset
 ========================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Arial, sans-serif;
+  font-family: "Poppins", "Segoe UI", sans-serif;
 }
 
 html,
@@ -16,124 +15,124 @@ body {
 }
 
 /* =========================
-   Background
+   Background (Dark Gradient)
 ========================= */
 body {
-  background: linear-gradient(135deg, #e3f2fd, #fce4ec);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background: linear-gradient(135deg, #0f172a, #020617);
+  color: #e5e7eb;
 }
 
 /* =========================
    Page Layout
 ========================= */
 .page-container {
-  width: 100%;
-  min-height: calc(100vh - 64px); /* navbar space */
+  min-height: 100vh;
+  padding-top: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px;
 }
 
 /* =========================
-   Card UI
+   Glass Card
 ========================= */
 .page-card {
-  background: #ffffff;
   width: 100%;
   max-width: 420px;
-  padding: 28px 32px;
-  border-radius: 16px;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
-  animation: fadeSlide 0.6s ease-in-out;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Card Hover Effect */
-.page-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.16);
+  padding: 32px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  animation: scaleIn 0.4s ease;
 }
 
 /* =========================
-   Headings
+   Heading
 ========================= */
 .page-card h2 {
   text-align: center;
-  margin-bottom: 22px;
   font-size: 1.6rem;
-  font-weight: 600;
-  color: #1e293b;
+  font-weight: 500;
+  margin-bottom: 24px;
+  color: #f9fafb;
 }
 
 /* =========================
-   Form Spacing
+   Spacing
 ========================= */
-.page-card > * {
-  margin-bottom: 16px;
+.page-card > *:not(:last-child) {
+  margin-bottom: 18px;
 }
 
 /* =========================
-   Material UI Fixes
+   Inputs
 ========================= */
 .MuiTextField-root,
 .MuiSelect-root {
   width: 100%;
 }
 
-/* Button Styling */
+.MuiOutlinedInput-root {
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.06);
+  color: #f9fafb;
+}
+
+.MuiOutlinedInput-notchedOutline {
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* =========================
+   Button
+========================= */
 .MuiButton-root {
-  width: 100%;
-  padding: 10px !important;
+  height: 46px;
+  border-radius: 14px !important;
   font-size: 0.95rem !important;
-  font-weight: 600 !important;
-  border-radius: 10px !important;
   text-transform: none !important;
-  transition: all 0.3s ease !important;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6) !important;
+  box-shadow: 0 8px 20px rgba(99, 102, 241, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .MuiButton-root:hover {
-  transform: scale(1.02);
-}
-
-/* Rating Center */
-.MuiRating-root {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-}
-
-/* Checkbox Alignment */
-.MuiFormControlLabel-root {
-  margin-left: 0 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(139, 92, 246, 0.6);
 }
 
 /* =========================
-   Animations
+   Checkbox & Rating
 ========================= */
-@keyframes fadeSlide {
+.MuiFormControlLabel-root {
+  color: #e5e7eb;
+}
+
+.MuiRating-root {
+  color: #facc15;
+}
+
+/* =========================
+   Animation
+========================= */
+@keyframes scaleIn {
   from {
     opacity: 0;
-    transform: translateY(15px);
+    transform: scale(0.96);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: scale(1);
   }
 }
 
 /* =========================
-   Responsive
+   Mobile
 ========================= */
 @media (max-width: 480px) {
   .page-card {
-    padding: 22px;
-  }
-
-  .page-card h2 {
-    font-size: 1.4rem;
+    padding: 24px;
   }
 }
