@@ -1,3 +1,3 @@
 export default function Contact() {
-  return <p>Contact: heyshubham@gmail.com</p>
+  return <p>Contact: Roushan@gmail.com</p>
 }
