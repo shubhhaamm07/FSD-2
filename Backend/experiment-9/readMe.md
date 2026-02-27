@@ -202,5 +202,36 @@ After completing this experiment, you will understand:
 
 ## ⚠️ Note
 
-This project is for learning purposes only.  
-Do NOT use hardcoded secrets or in-memory users in production.
+---
+
+## 📸 Screenshots
+
+### 🟢 Basic Authentication Success
+
+![Basic Auth](screenShorts/basic-auth.png)
+
+---
+
+### 🟢 Simple Token Login
+
+![Token Login](screenShorts/token-login.png)
+
+---
+
+### 🟢 JWT Login Response
+
+![JWT Login](screenShorts/jwt-login.png)
+
+---
+
+### 🟢 Token Protected
+
+![Token Protected](screenShorts/tokem-protected.png.png)
+
+---
+
+### 🟢 JWT-Protected
+
+![Token Protected](screenShorts/jwt-protected.png.png.png)
+
+---
