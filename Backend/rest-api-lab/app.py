@@ -15,6 +15,6 @@ def create_app():
 
 app = create_app()
 
-@app.route("/name")
+@app.route("/")
 def home():
     return {"message": "I am Don"}
