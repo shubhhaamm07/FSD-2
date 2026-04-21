@@ -1,4 +1,4 @@
-name: Fullstack Tests
+name: Fullstack Tests + Docker
 
 on:
   push:
@@ -25,14 +25,11 @@ jobs:
 
       - name: Install dependencies
         run: |
-          python -m venv venv
-          source venv/bin/activate
           pip install flask pytest pytest-cov
 
       - name: Run backend tests
-        run: |
-          source venv/bin/activate
-          pytest
+        run: pytest
+
 
   frontend-test:
     runs-on: ubuntu-latest
@@ -48,10 +45,25 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: 20
+          node-version: 18
 
       - name: Install dependencies
         run: npm install
 
       - name: Run frontend tests
         run: npm run test -- --run
+
+
+  docker-build:
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: Testing/Backend
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Build Docker Image
+        run: docker build -t backend-app .
